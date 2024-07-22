@@ -82,6 +82,7 @@ async function run() {
     if (cache && isCacheFeatureAvailable()) {
       await restore(cache, cacheDependencyPath);
     }
+    process.exit(0);
   } catch (error) {
     core.setFailed((error as Error).message);
   }
